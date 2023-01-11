@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>My Web Page</title>
+    <link type="text/css" rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+<div class="container">
+    <div>
+        <h1>회원가입</h1>
+        <form action="/regi" method="post">
+            <table border="1">
+                <tr><th width="70">ID:</th><TD><INPUT type="text" name="Id" size="13"></TD></tr>
+                <tr><th width="70">PW:</th><TD><INPUT type="text" name="Pw" size="13"></TD></tr>
+                <tr align="center">
+                    <td colspan="2">
+                        <input type="submit" value="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="container-List">
+        <table border = "1">
+            <tr>
+                <th>Id</th>
+                <th>Pw</th>
+            </tr>
+            <tr th:each="List : ${userList}">
+                <td th:text="${List.Id}" width="100"></td>
+                <td th:text="${List.Pw}" width="100"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

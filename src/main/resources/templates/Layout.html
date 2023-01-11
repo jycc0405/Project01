@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>layout</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/Style.css}">
+</head>
+<body>
+<nav id="nav">
+  <img id="logo" src="/assets/logo.png" alt="LOGO"  >
+<ul>
+  <li><a href="#">주소</a></li>
+  <li><a href="#">검색</a></li>
+</ul>
+  <a id="others" href="#">내 계정</a>
+</nav>
+<h1>공통으로 들어가는 부분</h1>
+
+<!-- 기본 템플릿 안에 삽입될 내용 Start -->
+<th:block layout:fragment="content"></th:block>
+<!-- 기본 템플릿 안에 삽입될 내용 End -->
+</body>
+</html>
